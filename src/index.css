@@ -3,9 +3,21 @@
   text-align: center;
 }
 
+#main-container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .container {
-  width: 50%;
-  height: 100%;
+  margin: 20px;
+  padding: 5px;
+  width: 45%;
+  height: 500px;
   border: 2px solid black;
   border-radius: 5px;
 }
@@ -16,4 +28,10 @@
   outline: none;
   resize: none;
   border: none;
+  font-size: 20px;
+}
+
+#preview {
+  font-size: 17px;
+  height: auto;
 }

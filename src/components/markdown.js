@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown";
 const Markdown = ({input}) => {
 
     return (
-        <div>
+        <div id="preview" className="container">
             <ReactMarkdown children={input} />
         </div>
     )
