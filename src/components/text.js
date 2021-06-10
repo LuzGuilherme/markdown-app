@@ -1,10 +1,10 @@
 import React from "react";
 
-const Text = () => {
+const Text = ({value, onChange}) => {
 
     return (
         <div className="container">
-            <textarea id="editor"></textarea>
+            <textarea onChange={onChange} value={value} id="editor"></textarea>
         </div>
     )
 }

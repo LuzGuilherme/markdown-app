@@ -6,10 +6,15 @@ import Text from "./components/text";
 import Markdown from "./components/markdown";
 
 class App extends Component {
-  state = { 
-    markdownText: "",
-    inputText:""
-   }
+  constructor(){
+    super();
+    this.state = { 
+      markdownText: " ",
+      inputText:""
+     };
+  
+     this.HandleChange = this.HandleChange.bind(this);
+  }
 
    HandleChange = (event) =>{
      this.setState({
