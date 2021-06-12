@@ -9,70 +9,28 @@ class App extends Component {
   constructor(){
     super();
     this.state = { 
-      inputText: ''
+      inputText: '',
      };
   
      this.HandleChange = this.HandleChange.bind(this);
     }
-    
-    setPlaceholder = () =>{
-
-     const placeholder = `# Welcome to my React Markdown Previewer!
-
-      ## This is a sub-heading...
-      ### And here's some other cool stuff:
-
-      Heres some code, \`<div></div>\`, between 2 backticks.
-
-      \`\`\`
-      // this is multi-line code:
-
-      function anotherExample(firstLine, lastLine) {
-        if (firstLine == '\`\`\`' && lastLine == '\`\`\`') {
-          return multiLineCode;
-        }
-      }
-      \`\`\`
-
-      You can also make text **bold**... whoa!
-      Or _italic_.
-      Or... wait for it... **_both!_**
-      And feel free to go crazy ~~crossing stuff out~~.
-
-      There's also [links](https://www.freecodecamp.com), and
-      > Block Quotes!
-
-      And if you want to get really crazy, even tables:
-
-      Wild Header | Crazy Header | Another Header?
-      ------------ | ------------- | -------------
-      Your content can | be here, and it | can be here....
-      And here. | Okay. | I think we get it.
-
-      - And of course there are lists.
-        - Some are bulleted.
-          - With different indentation levels.
-              - That look like this.
-
-
-      1. And there are numbererd lists too.
-      1. Use just 1s if you want!
-      1. And last but not least, let's not forget embedded images:
-
-      ![React Logo w/ Text](https://goo.gl/Umyytc)
-      `;
-      return placeholder;
-    }
-
-  componentDidMount(){
-    this.setState({
-      inputText: this.setPlaceholder()
-    })
-  }
 
    HandleChange = (event) =>{
      this.setState({
       inputText: event.target.value
+     })
+   }
+
+   SetPlaceholder = () => {
+    const placeholder = "# Welcome to my React Markdown Previewer! \n ## This is a sub-heading... \n ### And here's some other cool stuff: \n **You can also make text bold... whoa!** \n *Or italic.* \n > blockquote \n 1. And there are numbered lists too. \n 2. Use just 1s if you want! \n 3. Third item \n - First item \n - Second item \n - Third item \n `code` \n --- \n [freeCodeCamp](https://www.freecodecamp.com) \n ![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)" ;
+
+    return placeholder;
+   }
+
+   componentDidMount() {
+     this.setState({
+       inputText: this.SetPlaceholder()
+
      })
    }
 
@@ -81,7 +39,7 @@ class App extends Component {
       <div>
         <Title />
         <div id="main-container">
-          <Text onChange={this.HandleChange} />
+          <Text onChange={this.HandleChange} initial={this.state.inputText} />
           <Markdown input={this.state.inputText}/>
         </div>
       </div>
