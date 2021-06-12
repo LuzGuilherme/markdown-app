@@ -22,7 +22,7 @@ class App extends Component {
    }
 
    SetPlaceholder = () => {
-    const placeholder = "# Welcome to my React Markdown Previewer! \n ## This is a sub-heading... \n ### And here's some other cool stuff: \n **You can also make text bold... whoa!** \n *Or italic.* \n > blockquote \n 1. And there are numbered lists too. \n 2. Use just 1s if you want! \n 3. Third item \n - First item \n - Second item \n - Third item \n `code` \n --- \n [freeCodeCamp](https://www.freecodecamp.com) \n ![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)" ;
+    const placeholder = "# Welcome to my React Markdown Previewer! \n ## This is a sub-heading... \n ### And here's some other cool stuff: \n **You can also make text bold... whoa!** \n *Or italic.* \n > blockquote \n 1. And there are numbered lists too. \n 2. Use just 1s if you want! \n 3. Third item \n - First item \n - Second item \n - Third item \n `code` \n --- \n [freeCodeCamp](https://www.freecodecamp.com) \n ---  \n ![freeCodeCamp Logo](https://cdn.iconscout.com/icon/free/png-256/free-codecamp-3521437-2944881.png)" ;
 
     return placeholder;
    }
